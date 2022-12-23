@@ -30,8 +30,11 @@ const icon = document.querySelector('#icon')
 const description = document.querySelector('#description')
 const temp = document.querySelector('#temp')
 
+//fetching api key from openweathermap
         fetch(
           "https://api.openweathermap.org/data/2.5/weather?q=" +
             inputPart.value +
             "&1f69fc603ff2d4b4c44901ea991ea5af")
+//converting response to json format
+        .then(response => response.json())
            
