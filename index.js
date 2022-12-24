@@ -1,40 +1,47 @@
-// let weather = {
-//     "apiKey": "1f69fc603ff2d4b4c44901ea991ea5af",
-//     fetchWeather: function (city) {
-//         fetch(
-//           "https://api.openweathermap.org/data/2.5/weather?q=" +
-//             city +
-//             "&units=metric&appid=" +
-//             this.apiKey
-//         )
-//           .then((response) => {
-//             if (!response.ok) {
-//               alert("No weather found.");
-//               throw new Error("No weather found.");
-//             }
-//             return response.json();
-//           })
-//           .then((data) => console.log(data));
-//       },
-//       displayWeather: function (data){
+let weather = async () => {
 
-//       }
-//     }
+fetch('https://api.openweathermap.org/data/2.5/weather?q=nairobi&appid=220789f4e8c25f055bb2d1eae7f527ab')
+.then(res => res.json())
+.then(data => console.log(data))
 
-// adding variables that will help in DOM
-const button = document.querySelector('#button')
-const form = document.querySelector("#form"),
-inputPart = form.querySelector("#city")
-const country = document.querySelector('#country')
-const icon = document.querySelector('#icon')
-const description = document.querySelector('#description')
-const temp = document.querySelector('#temp')
+}
+console.log (weather())
+document.querySelector('#butt').addEventListener('click',  ()  => {
+    console.log (weather())
 
-//fetching api key from openweathermap
-        fetch(
-          "https://api.openweathermap.org/data/2.5/weather?q=" +
-            inputPart.value +
-            "&1f69fc603ff2d4b4c44901ea991ea5af")
-//converting response to json format
-        .then(response => response.json())
+})
+
+
+
+// )
+
+
+
+// let country = document.querySelector('#country')
+// let description = document.querySelector('#description')
+// let temp = document.querySelector('#temp')
+
+// document.querySelector('#button').addEventListener('click', () => {
+
+//     // console.log(
+//     fetch('https://api.openweathermap.org/data/2.5/weather?q=nairobi&appid=220789f4e8c25f055bb2d1eae7f527ab')
+//         .then(res => res.json())
+//         .then(data =>  console.log(data)
+//             // {
+//             // var nameValue = data['name'];
+//             // var tempValue = data['main']['temp'];
+//             // var descriptionValue = data['weather'][0]['description'];
+
+
+          
+//             // country.innerHTML = nameValue;
            
+//             // description.innerHTML = descriptionValue;
+//             // temp.innerHTML = tempValue;
+
+//         // }
+//         )
+//     // )
+
+
+// });
