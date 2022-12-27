@@ -8,6 +8,8 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+  /* importing google fonts - poppins */
+  @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@100;200;400;600&family=Quicksand&family=Russo+One&family=Zilla+Slab+Highlight&display=swap');
   #form{
       margin-top: 7rem;
   }
