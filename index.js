@@ -3,6 +3,7 @@ const card = wrapper.querySelector('.card text-center')
 const city = wrapper.querySelector('#city')
 const getLocation = wrapper.querySelector('#butt')
 let api;
+let icon= 'http://openweathermap.org/img/wn/10d@2x.png';
          
 
 
@@ -26,7 +27,7 @@ getLocation.addEventListener('click', ()=> {
 function onSuccess(position){
     // getting lat and lon of the user device from cordinates
     const {latitude, longitude} = position.coords;
-    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=220789f4e8c25f055bb2d1eae7f527ab`
+    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&${icon}&units=metric&appid=220789f4e8c25f055bb2d1eae7f527ab`
     fetchweatherData(api);
 }
 
@@ -36,9 +37,10 @@ function onError(error){
 }
 //writing function to fetch api
 function requestApi(city){
-   api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=220789f4e8c25f055bb2d1eae7f527ab`
+   api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&{icon}&units=metric&appid=220789f4e8c25f055bb2d1eae7f527ab`
     fetchweatherData(api);
 }
+
 
 function fetchweatherData(){
         //fetching api response and returning it while parsing into js object
@@ -63,7 +65,8 @@ function weatherDetails(info){
         
 //using DOM to display weather details
          country.innerText = (info['name']);
-         icon.innerText = (info['weather']['0']['main'])
+         icon.innerText = (info['weather'][0]['main'])
+         //using math floor to set temperature to whole numbers without decimal places
           temp.innerHTML = Math.floor( (info['main']['temp']));
           description.innerHTML = (info['weather'][0]['description'])
     }
@@ -72,98 +75,3 @@ function weatherDetails(info){
 
 
 
-
-// fetch('https://api.openweathermap.org/data/2.5/weather?q=city,{country code}&appid=220789f4e8c25f055bb2d1eae7f527ab')
-// .then(res => res.json())
-// .then(data => console.log(data)
-
-    // {
-    //  console.log(data['name'])
-        // var nameValue = console.log(data['name']) 
-        // var tempValue = console.log(data['main']['temp'])
-        //   var descriptionValue = console.log(data['weather'][0]['description'])
-         
-         
-          
-        // country.innerHTML = console.log(nameValue);
-                    
-        // description.innerHTML = descriptionValue;
-        //  temp.innerHTML = tempValue;
-
-
-
-// }
-// );
-
-
-   
-   
-//below works
-
-
-// let weather = async () => {
-
-
-// fetch('https://api.openweathermap.org/data/2.5/weather?q=nairobi&appid=220789f4e8c25f055bb2d1eae7f527ab')
-// .then(res => res.json())
-// .then(data => console.log(data)
-    // {
-//     var nameValue = data['name'];
-//    var tempValue = data['main']['temp'];
-//      var descriptionValue = data['weather'][0]['description'];
-    
-    
-              
-//    country.innerHTML = nameValue;
-               
-//    description.innerHTML = descriptionValue;
-//     temp.innerHTML = tempValue;
-    
-//   })
-// )
-
-// }
-
-
-
-// document.querySelector('#butt').addEventListener('click',  ()  => {
-  
-
-// })
-
-
-//above works
-
-
-// )
-
-
-
-// let country = document.querySelector('#country')
-// let description = document.querySelector('#description')
-// let temp = document.querySelector('#temp')
-
-// document.querySelector('#button').addEventListener('click', () => {
-
-//     // console.log(
-//     fetch('https://api.openweathermap.org/data/2.5/weather?q=nairobi&appid=220789f4e8c25f055bb2d1eae7f527ab')
-//         .then(res => res.json())
-//         .then(data =>  console.log(data)
-//             // {
-            // var nameValue = data['name'];
-            // var tempValue = data['main']['temp'];
-            // var descriptionValue = data['weather'][0]['description'];
-
-
-          
-            // country.innerHTML = nameValue;
-           
-            // description.innerHTML = descriptionValue;
-            // temp.innerHTML = tempValue;
-
-//         // }
-//         )
-//     // )
-
-
-// });
