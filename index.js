@@ -26,7 +26,7 @@ getLocation.addEventListener('click', ()=> {
 function onSuccess(position){
     // getting lat and lon of the user device from cordinates
     const {latitude, longitude} = position.coords;
-    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=220789f4e8c25f055bb2d1eae7f527ab`
+    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=220789f4e8c25f055bb2d1eae7f527ab`
     fetchweatherData(api);
 }
 
@@ -36,7 +36,7 @@ function onError(error){
 }
 //writing function to fetch api
 function requestApi(city){
-   api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=220789f4e8c25f055bb2d1eae7f527ab`
+   api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=220789f4e8c25f055bb2d1eae7f527ab`
     fetchweatherData(api);
 }
 
@@ -57,13 +57,14 @@ function weatherDetails(info){
         const row = document.querySelector('.row')
         const cards = row.querySelector('#cards')
         const country = cards.querySelector('#country')
+        const icon = cards.querySelector('#icon')
         const temp = cards.querySelector('#temp')
         const description = cards.querySelector('#description')
         
-
-        country.innerText = (info['name']);
-        
-          temp.innerHTML = (info['main']['temp']);
+//using DOM to display weather details
+         country.innerText = (info['name']);
+         icon.innerText = (info['weather']['0']['main'])
+          temp.innerHTML = Math.floor( (info['main']['temp']));
           description.innerHTML = (info['weather'][0]['description'])
     }
    
