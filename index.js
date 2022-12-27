@@ -1,11 +1,23 @@
-document.querySelector('#city').addEventListener('click',() => 
-    console.log(form.childNodes[1])
-)
+const wrapper = document.querySelector('.wrapper')
+const card = wrapper.querySelector('.card text-center')
+// const form = card.querySelector('#form')
+const city = wrapper.querySelector('#city')
 
+city.addEventListener('keyup', e => {
+    if (e.key == 'Enter' && city.value != ''){
+       requestApi(city.value)
+    }
+})
 
-fetch('https://api.openweathermap.org/data/2.5/weather?q=city,{country code}&appid=220789f4e8c25f055bb2d1eae7f527ab')
-.then(res => res.json())
-.then(data => console.log(data)
+//writing function to fetch api
+function requestApi(city){
+    console.log(city)
+
+}
+
+// fetch('https://api.openweathermap.org/data/2.5/weather?q=city,{country code}&appid=220789f4e8c25f055bb2d1eae7f527ab')
+// .then(res => res.json())
+// .then(data => console.log(data)
 
     // {
     //  console.log(data['name'])
@@ -23,7 +35,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=city,{country code}&app
 
 
 // }
-);
+// );
 
 
    
