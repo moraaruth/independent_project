@@ -3,6 +3,8 @@ const card = wrapper.querySelector('.card text-center')
 const city = wrapper.querySelector('#city')
 const getLocation = wrapper.querySelector('#butt')
 let api;
+         
+
 
 city.addEventListener('keyup', e => {
     if (e.key == 'Enter' && city.value != ''){
@@ -52,16 +54,22 @@ function weatherDetails(info){
     if(info.cod == '404'){
         alert(`${city.value} is not a valid city name`)
     }else {
-        var nameValue = console.log(info['name']) ;
-        var tempValue = console.log(info['main']['temp']);
-          var descriptionValue = console.log(info['weather'][0]['description'])
-         
+        const row = document.querySelector('.row')
+        const cards = row.querySelector('#cards')
+        const country = cards.querySelector('#country')
+        const temp = cards.querySelector('#temp')
+        const description = cards.querySelector('#description')
+        
 
-          city.innerHTML = nameValue;
-          temp.innerHTML = tempValue;
-          description.innerHTML = descriptionValue;
+        country.innerText = (info['name']);
+        
+          temp.innerHTML = (info['main']['temp']);
+          description.innerHTML = (info['weather'][0]['description'])
     }
+   
 }
+
+
 
 
 // fetch('https://api.openweathermap.org/data/2.5/weather?q=city,{country code}&appid=220789f4e8c25f055bb2d1eae7f527ab')
