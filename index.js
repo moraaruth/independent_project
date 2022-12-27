@@ -2,6 +2,7 @@ const wrapper = document.querySelector('.wrapper')
 const card = wrapper.querySelector('.card text-center')
 const city = wrapper.querySelector('#city')
 const getLocation = wrapper.querySelector('#butt')
+let api;
 
 city.addEventListener('keyup', e => {
     if (e.key == 'Enter' && city.value != ''){
@@ -19,17 +20,37 @@ getLocation.addEventListener('click', ()=> {
     }
 
 })
+
+function onSuccess(position){
+    // getting lat and lon of the user device from cordinates
+    const {latitude, longitude} = position.coords;
+    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=220789f4e8c25f055bb2d1eae7f527ab`
+    fetchweatherData(api);
+}
+
+function onError(error){
+   alert('Sorry, location permission denied!')
+
+}
 //writing function to fetch api
 function requestApi(city){
-    let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=220789f4e8c25f055bb2d1eae7f527ab`
-    //fetching api response and returning it while parsing into js object
-    fetch(api)
-    .then(response => (response.json()))
-    //.then calling weatherDeatils function with parsing api result as an argument
-    .then(result => weatherDetails(result))
+   api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=220789f4e8c25f055bb2d1eae7f527ab`
+    fetchweatherData(api);
+}
+
+function fetchweatherData(){
+        //fetching api response and returning it while parsing into js object
+        fetch(api)
+        .then(response => (response.json()))
+        //.then calling weatherDeatils function with parsing api result as an argument
+        .then(result => weatherDetails(result))
+
 }
 function weatherDetails(info){
-    console.log(info)
+    //if user inputs an invalid city name, gets error
+    if(info.cod == '404'){
+        alert(`${city.value} is not a valid city name`)
+    }
 }
 
 
