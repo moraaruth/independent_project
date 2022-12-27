@@ -43,13 +43,23 @@ function fetchweatherData(){
         fetch(api)
         .then(response => (response.json()))
         //.then calling weatherDeatils function with parsing api result as an argument
-        .then(result => weatherDetails(result))
+        .then(result => weatherDetails(result)
+        )
 
 }
 function weatherDetails(info){
     //if user inputs an invalid city name, gets error
     if(info.cod == '404'){
         alert(`${city.value} is not a valid city name`)
+    }else {
+        var nameValue = console.log(info['name']) ;
+        var tempValue = console.log(info['main']['temp']);
+          var descriptionValue = console.log(info['weather'][0]['description'])
+         
+
+          city.innerHTML = nameValue;
+          temp.innerHTML = tempValue;
+          description.innerHTML = descriptionValue;
     }
 }
 
@@ -131,16 +141,16 @@ function weatherDetails(info){
 //         .then(res => res.json())
 //         .then(data =>  console.log(data)
 //             // {
-//             // var nameValue = data['name'];
-//             // var tempValue = data['main']['temp'];
-//             // var descriptionValue = data['weather'][0]['description'];
+            // var nameValue = data['name'];
+            // var tempValue = data['main']['temp'];
+            // var descriptionValue = data['weather'][0]['description'];
 
 
           
-//             // country.innerHTML = nameValue;
+            // country.innerHTML = nameValue;
            
-//             // description.innerHTML = descriptionValue;
-//             // temp.innerHTML = tempValue;
+            // description.innerHTML = descriptionValue;
+            // temp.innerHTML = tempValue;
 
 //         // }
 //         )
