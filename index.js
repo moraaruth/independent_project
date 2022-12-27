@@ -1,7 +1,7 @@
 const wrapper = document.querySelector('.wrapper')
 const card = wrapper.querySelector('.card text-center')
-// const form = card.querySelector('#form')
 const city = wrapper.querySelector('#city')
+const getLocation = wrapper.querySelector('#butt')
 
 city.addEventListener('keyup', e => {
     if (e.key == 'Enter' && city.value != ''){
@@ -9,11 +9,29 @@ city.addEventListener('keyup', e => {
     }
 })
 
+getLocation.addEventListener('click', ()=> {
+    //if/else statement if browser supports geolation api
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(onSuccess, onError)
+
+    }else{
+        alert('Sorry, unable to get location!')
+    }
+
+})
 //writing function to fetch api
 function requestApi(city){
-    console.log(city)
-
+    let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=220789f4e8c25f055bb2d1eae7f527ab`
+    //fetching api response and returning it while parsing into js object
+    fetch(api)
+    .then(response => (response.json()))
+    //.then calling weatherDeatils function with parsing api result as an argument
+    .then(result => weatherDetails(result))
 }
+function weatherDetails(info){
+    console.log(info)
+}
+
 
 // fetch('https://api.openweathermap.org/data/2.5/weather?q=city,{country code}&appid=220789f4e8c25f055bb2d1eae7f527ab')
 // .then(res => res.json())
