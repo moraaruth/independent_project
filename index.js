@@ -65,7 +65,7 @@ function weatherDetails(info) {
 
         //using DOM to display weather details
         country.innerText = (info['name']);
-        id.innerText= console.log(  (info['weather'][0]['id']))
+        id.innerText=  (info['weather'][0]['id'])
 
         //using custom icon according to the weather data received from api
         if((info['weather'][0]['id']) == 800){
