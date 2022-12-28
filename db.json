@@ -1,36 +1,43 @@
 {
-    "coord":
-    {
-        "lon":36.8167,
-        "lat":-1.2833},
-        "weather":
-        [
-            {
-                "id":802,
-                "main":"Clouds",
-                "description":"scattered clouds",
-                "icon":"03d"}],"base":"stations",
-                "main":{"temp":299.77,
-                    "feels_like":299.77,
-                    "temp_min":297.02,
-                    "temp_max":299.77,
-                    "pressure":1017,
-                    "humidity":36},
-                    "visibility":10000,
-                    "wind":{"speed":3.6,
-                        "deg":90},
-                        "clouds":{"all":40},
-                        "dt":1671890524,
-                        "sys":
-                        {
-                            "type":1,
-                            "id":2543,
-                            "country":"KE",
-                            "sunrise":1671852376,
-                            "sunset":1671896277},
-                            "timezone":10800,
-                            "id":184745,
-                            "name":"Nairobi",
-                            "cod":200
-
-                        }
+    "coord": {
+        "lon": 36.8167,
+        "lat": -1.2833
+    },
+    "weather": [
+        {
+            "id": 802,
+            "main": "Clouds",
+            "description": "scattered clouds",
+            "icon": "03d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 299.77,
+        "feels_like": 299.77,
+        "temp_min": 297.02,
+        "temp_max": 299.77,
+        "pressure": 1017,
+        "humidity": 36
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 3.6,
+        "deg": 90
+    },
+    "clouds": {
+        "all": 40
+    },
+    "dt": 1671890524,
+    "sys": {
+        "type": 1,
+        "id": 2543,
+        "country": "KE",
+        "sunrise": 1671852376,
+        "sunset": 1671896277
+    },
+    "timezone": 10800,
+    "id": 184745,
+    "name": "Nairobi",
+    "cod": 200
+}
