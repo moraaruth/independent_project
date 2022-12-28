@@ -15,7 +15,8 @@
 }
 button {
   padding: 2rem;
-  width: 50%;
+  margin-top: 3rem;
+  width: 40%;
 }
 #city {
   padding: 0.6rem;
@@ -33,4 +34,8 @@ button {
   font-size: 15px;
   font-weight: 800;
   text-align: center;
+}
+img{
+  height: 50px;
+  width: 50px;
 }
