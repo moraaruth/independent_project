@@ -1,3 +1,6 @@
+document.addEventListener('DOMContentLoaded', ()=>{
+    
+
 const wrapper = document.querySelector('.wrapper')
 const card = wrapper.querySelector('.card text-center')
 const city = wrapper.querySelector('#city')
@@ -121,7 +124,7 @@ function weatherDetails(info) {
     }
 
 }
-
+} )
 
 
 //after clicking submit, city bbe blank
