@@ -48,7 +48,7 @@
 
 - Used the Openweathermap API to fetch weather data.
 
-- When user inputs current location and Enter , user sees the weather of that location.
+- When user inputs current location and Enter or inputs city and clicks submit, user sees the weather of that location.
 
 - When user clicks on 'get location' button, the app automatically selects location and updates.
 
@@ -59,7 +59,7 @@
 
 ## Github Pages link
 
-Unable to get link because it is a private repository.
+`https://moraaruth.github.io/independent_project/`
 
 
 ## Reference
