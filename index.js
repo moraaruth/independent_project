@@ -1,17 +1,27 @@
 const wrapper = document.querySelector('.wrapper')
 const card = wrapper.querySelector('.card text-center')
 const city = wrapper.querySelector('#city')
+const submit = wrapper.querySelector('#submit')
 const getLocation = wrapper.querySelector('#butt')
 let api;
 let wIcon = document.querySelector("#icon")
 
-
+// if uses presses enter he can still get weather details
 city.addEventListener('keyup', e => {
     if (e.key == 'Enter' && city.value != '') {
         requestApi(city.value)
     }
 })
-
+// if user clicks submit button, can still get weather details
+submit.addEventListener('click', e => {
+    if (city.value !== ''){
+        requestApi(city.value)
+    }else if (city.value === '') {
+        alert('Sorry, please input City name!')
+    }
+        
+    
+})
 getLocation.addEventListener('click', () => {
     //if/else statement if browser supports geolation api
     if (navigator.geolocation) {

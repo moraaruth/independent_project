@@ -12,16 +12,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@100;200;400;600&family=Quicksand&family=Russo+One&family=Zilla+Slab+Highlight&display=swap");
 #city {
   margin-top: 7rem;
+  margin-left: 7rem;
+  padding: 0.6rem;
+  width: 40%;
 }
-button {
-  padding: 2rem;
+#butt {
+  padding: 1.5rem;
   margin-top: 3rem;
   width: 40%;
 }
-#city {
-  padding: 0.6rem;
-  width: 50%;
-}
+
 .row {
   margin-left: 30%;
   margin-right: 30%;
@@ -34,10 +34,18 @@ button {
   font-size: 15px;
   font-weight: 800;
   text-align: center;
+  width: 40%;
+  margin-left: 18rem;
+
+
 }
 img{
   height: 50px;
   width: 50px;
   
   
+}
+#submit{
+  height: 35px;
+  width: 60px;
 }
