@@ -12,16 +12,23 @@ city.addEventListener('keyup', e => {
         requestApi(city.value)
     }
 })
+
 // if user clicks submit button, can still get weather details
+
 submit.addEventListener('click', e => {
+
+
     if (city.value !== ''){
         requestApi(city.value)
+        
     }else if (city.value === '') {
         alert('Sorry, please input City name!')
     }
-        
-    
+ 
 })
+
+
+
 getLocation.addEventListener('click', () => {
     //if/else statement if browser supports geolation api
     if (navigator.geolocation) {
@@ -111,7 +118,7 @@ function weatherDetails(info) {
 
 
 
-// styling cloud icon
+//after clicking submit, city bbe blank
 //writing readme
 //adding background images depending on weather
 //general outlook of app

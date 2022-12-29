@@ -11,7 +11,7 @@
 /* importing google fonts - poppins */
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@100;200;400;600&family=Quicksand&family=Russo+One&family=Zilla+Slab+Highlight&display=swap");
 #city {
-  margin-top: 7rem;
+  margin-top: 12rem;
   margin-left: 7rem;
   padding: 0.6rem;
   width: 40%;
@@ -36,6 +36,8 @@
   text-align: center;
   width: 40%;
   margin-left: 18rem;
+  height: 200px;
+
 
 
 }
