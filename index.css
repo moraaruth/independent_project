@@ -30,15 +30,15 @@
   background-color: var(--section-overlay);
   color: black;
   padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.7rem;
   padding-top: 3rem;
   border-radius: 3%;
   font-size: 15px;
   font-weight: 800;
   text-align: center;
-  width: 80%;
-  margin-left: 6.5rem;
+  width: 95%;
+  margin-left: 1.5rem;
   height: 270px;
 
 
