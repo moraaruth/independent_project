@@ -48,7 +48,7 @@
 
 - Used the Openweathermap API to fetch weather data.
 
-- When user inputs current location and Enter, user sees the weather of that location.
+- When user inputs current location and Enter , user sees the weather of that location.
 
 - When user clicks on 'get location' button, the app automatically selects location and updates.
 
