@@ -79,6 +79,7 @@ function weatherDetails(info) {
         const temp = cards.querySelector('#temp')
         const feels_like = cards.querySelector('#feels_like')
         const humidity = cards.querySelector('#humidity')
+        const windSpeed = cards.querySelector('#windSpeed')
         const description = cards.querySelector('#description')
         
 
@@ -115,6 +116,7 @@ function weatherDetails(info) {
         temp.innerHTML =`Temperature: ${Math.floor((info['main']['temp']))}`;
         feels_like.innerHTML = `Feels like: ${Math.floor((info['main']['feels_like']))}`;
         humidity.innerHTML = `Humidity: ${Math.floor((info['main']['humidity']))}`;
+        windSpeed.innerHTML = `Wind Speed: ${Math.floor((info['wind']['speed']))}`
         description.innerHTML = (info['weather'][0]['description'])
     }
 
