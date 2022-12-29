@@ -77,6 +77,8 @@ function weatherDetails(info) {
         const country = cards.querySelector('#country')
          const id = cards.querySelector('#icon')
         const temp = cards.querySelector('#temp')
+        const feels_like = cards.querySelector('#feels_like')
+        const humidity = cards.querySelector('#humidity')
         const description = cards.querySelector('#description')
         
 
@@ -110,7 +112,9 @@ function weatherDetails(info) {
 
         }
         //using math floor to set temperature to whole numbers without decimal places
-        temp.innerHTML = Math.floor((info['main']['temp']));
+        temp.innerHTML =`Temperature: ${Math.floor((info['main']['temp']))}`;
+        feels_like.innerHTML = `Feels like: ${Math.floor((info['main']['feels_like']))}`;
+        humidity.innerHTML = `Humidity: ${Math.floor((info['main']['humidity']))}`;
         description.innerHTML = (info['weather'][0]['description'])
     }
 

@@ -29,14 +29,17 @@
 .card-body {
   background-color: var(--section-overlay);
   color: black;
-  padding: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 3rem;
   border-radius: 3%;
   font-size: 15px;
   font-weight: 800;
   text-align: center;
-  width: 40%;
+  width: 45%;
   margin-left: 18rem;
-  height: 200px;
+  height: 270px;
 
 
 
