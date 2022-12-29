@@ -57,10 +57,6 @@
 - Shows input section, where user inputs location, temperature in °C, how it feels like,
   humidity and wind speed.
 
-- You are able to change temperature from C to F.
-
-
-
 ## Github Pages link
 
 Unable to get link because it is a private repository.
