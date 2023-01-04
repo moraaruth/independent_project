@@ -48,11 +48,9 @@
 
 - Used the Openweathermap API to fetch weather data.
 
-<<<<<<< HEAD
 - When user inputs current location and Enter or inputs city and clicks submit, user sees the weather of that location.
-=======
+
 - When user inputs current location and Enter or inputs current location and clicks submit, user sees the weather of that location.
->>>>>>> gh-pages
 
 - When user clicks on 'get location' button, the app automatically selects location and updates.
 
