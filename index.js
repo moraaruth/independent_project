@@ -128,6 +128,6 @@ function weatherDetails(info) {
 
 
 //after clicking submit, city bbe blank
-//writing readme
+
 //adding background images depending on weather
 //general outlook of app
